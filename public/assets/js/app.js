@@ -1,18 +1,22 @@
+var db = firebase.database();
 $(document).foundation()
-// js for new client form
+// js for new client form   
 $(function () {
     var showClass = 'show';
-  
+
     $('input').on('checkval', function () {
-      var label = $(this).prev('label');
-      if(this.value !== '') {
-        label.addClass(showClass);
-      } else {
-        label.removeClass(showClass);
-      }
+        var label = $(this).prev('label');
+        if (this.value !== '') {
+            label.addClass(showClass);
+        } else {
+            label.removeClass(showClass);
+        }
     }).on('keyup', function () {
-      $(this).trigger('checkval');
+        $(this).trigger('checkval');
     });
-  });
-  
-  
+});
+
+
+
+
+
